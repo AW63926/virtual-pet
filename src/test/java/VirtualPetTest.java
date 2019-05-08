@@ -72,13 +72,14 @@ public class VirtualPetTest {
 	}
 	@Test
 	public void gamePLayTest() {
-		underTest.treasureHunt();
-		underTest.breatheFire();
-		underTest.fly();
-		underTest.eat();
-		underTest.sleep();
+//		underTest.treasureHunt();
+//		underTest.breatheFire();
+//		underTest.fly();
+//		underTest.eat();
+//		underTest.sleep();
 		underTest.gamePLay();
-		//underTest.gamePLay();
+		//underTest.dragonArtOne();
+		//underTest.dragonArtTwo();
 		
 	}
 

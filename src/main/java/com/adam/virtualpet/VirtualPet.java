@@ -144,7 +144,7 @@ public class VirtualPet {
 	public void sleepTracker() {
 		System.out.println("Energy left before nap: " + (10 - this.tickCount));
 		if (this.tickCount >= 10) {
-			System.out.println("Dragon has gone to sleep " + this.tickCount);
+			System.out.println("Dragon has gone to sleep ");
 			sleep();
 	}
 	}
@@ -167,7 +167,7 @@ public class VirtualPet {
 			System.out.println("Treasure Level: " + this.treasureCount);
 			break;
 		case 3:
-			System.out.println("Movin on up!!");
+			System.out.println("Movin on up!!  Now Im making money");
 			System.out.println("Treasure Level: " + this.treasureCount);
 			break;
 		case 4:
@@ -207,6 +207,8 @@ public class VirtualPet {
 		System.out.println("Enter 5: To make your Dragon sleep");
 		System.out.println("Enter 6: To count your Dragon's treasure");
 		System.out.println("Enter 7: To print menu");
+		System.out.println("Enter 8: To see your Dragon");
+		System.out.println("Enter 9: To learn about your Dragon");
 		System.out.println("Enter \"quit\" to exit");
 		System.out.println("**************************************************");
 	}
@@ -253,6 +255,13 @@ public class VirtualPet {
 		case "7":
 			printMenu();
 			break;
+		case"8":
+			dragonArtTwo();
+			dragonArtOne();
+			break;
+		case "9":
+			tellMeAboutDragon();
+			break;
 		case "quit":
 			menuLoop = false;
 			System.exit(0);
@@ -261,5 +270,43 @@ public class VirtualPet {
 		
 		}
 	}
+	
+	
+	public void tellMeAboutDragon() {
+		System.out.println("Hello, my name is " + this.dragonName + ".  I am " + this.color +
+				" and I am " + this.height + " feet tall, and " + this.lenght + " feet long.\n"
+						+ "I have big beautiful wings and I can Breath Fire!, but I am a gentle dragon. ");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//******************************************************************************
+	//Dragon Graphic output
+	
+	public void dragonArtOne() {
+		System.out.println(" ^___^");
+		System.out.println(" |o--o|");
+		System.out.println(" | .. |");
+		System.out.println(" \\_O_/ ");
+		System.out.println(" * HI *      ");
+	}
+	public void dragonArtTwo() {
+		System.out.println(" ^___^");
+		System.out.println(" |*--*|");
+		System.out.println(" | .. |");
+		System.out.println(" \\_-_/ ");
+		
+		}
+	}
 
-}
