@@ -222,7 +222,7 @@ public class VirtualPet {
 	
 	
 
-	//Gamplay####################################################################
+	//Gameplay####################################################################
 	
 	public void gamePLay() {
 		if(welcomeCount == 0) {
@@ -255,7 +255,7 @@ public class VirtualPet {
 		case "7":
 			printMenu();
 			break;
-		case"8":
+		case "8":
 			dragonArtTwo();
 			dragonArtOne();
 			break;
@@ -275,7 +275,7 @@ public class VirtualPet {
 	public void tellMeAboutDragon() {
 		System.out.println("Hello, my name is " + this.dragonName + ".  I am " + this.color +
 				" and I am " + this.height + " feet tall, and " + this.lenght + " feet long.\n"
-						+ "I have big beautiful wings and I can Breath Fire!, but I am a gentle dragon. ");
+						+ "I have big beautiful wings and I can Breathe Fire!, but I am a gentle dragon. ");
 	}
 	
 	
