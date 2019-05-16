@@ -66,7 +66,7 @@ public class VirtualPet {
 		// When method is called the dragon should eat
 		System.out.println("Time for a pizza!..Or 20...GULP!");
 		this.tickCount -= 1;
-		if(this.tickCount < 0) {
+		if (this.tickCount < 0) {
 			this.tickCount = 0;
 		}
 		sleepTracker();
@@ -85,23 +85,24 @@ public class VirtualPet {
 		System.out.println(".....zzzzzzz.......zzzzzz......zzzzzzzzzzzzzzz.......zzzzz");
 		this.tickCount -= 3;
 		int randNum = (int) (Math.random() * 5);
-		if(this.tickCount < 0) {
+		if (this.tickCount < 0) {
 			this.tickCount = 0;
-		}if(randNum == 5) {
+		}
+		if (randNum == 5) {
 			System.out.println("My precious treasure!!! Its all gone!");
 			this.treasureCount = 0;
 		}
-		
-		else if(randNum == 4) {
+
+		else if (randNum == 4) {
 			System.out.println("OH no! Someone stole from my pile of treasure!");
 			this.treasureCount -= 4;
-			if(this.treasureCount < 0) {
+			if (this.treasureCount < 0) {
 				this.treasureCount = 0;
 			}
-		}else if(randNum == 3) {
+		} else if (randNum == 3) {
 			System.out.println("I think someone has been in my cave!  I had better count my treasure!");
 			this.treasureCount -= 1;
-			if(this.treasureCount < 0) {
+			if (this.treasureCount < 0) {
 				this.treasureCount = 0;
 			}
 		}
@@ -109,16 +110,18 @@ public class VirtualPet {
 		sleepTracker();
 		return true;
 	}
-	//increases tick count by number given 
+
+	// increases tick count by number given
 	public int tick(int number) {
 		// Each time this method is called it will increase a tick counter
 		this.tickCount += number;
 		return this.tickCount;
 	}
-	//Treasure Hunt expends energy at different levels.  returns t/f found/not found
+
+	// Treasure Hunt expends energy at different levels. returns t/f found/not found
 	public boolean treasureHunt() {
 		int randNum = (int) (Math.random() * 5);
-		
+
 		if (randNum <= 2) {
 			tick(2);
 			this.treasureCount += 4;
@@ -137,23 +140,22 @@ public class VirtualPet {
 			sleepTracker();
 			return false;
 		}
-		
-		
+
 	}
-	//Tracks energy level
+
+	// Tracks energy level
 	public void sleepTracker() {
 		System.out.println("Energy left before nap: " + (10 - this.tickCount));
 		if (this.tickCount >= 10) {
 			System.out.println("Dragon has gone to sleep ");
 			sleep();
+		}
 	}
-	}
-	
-	
+
 	public void treasureTracker() {
 		System.out.println("Lets see how much treasure Ive got.");
 		int treasureTrack = this.treasureCount;
-		switch(treasureTrack) {
+		switch (treasureTrack) {
 		case 0:
 			System.out.println("OH NO!!! Im broke!");
 			System.out.println("Treasure Level: " + this.treasureCount);
@@ -186,18 +188,17 @@ public class VirtualPet {
 			System.out.println("IM RICHHHHHHH!!!!!!!!!!!!!!");
 			System.out.println("Treasure Level: " + this.treasureCount);
 			break;
-			
-			
+
 		}
-		
+
 	}
-	
+
 	public void welcome() {
 		System.out.println("Welcome!");
 		welcomeCount++;
-		
+
 	}
-	
+
 	public void printMenu() {
 		System.out.println("**************************************************");
 		System.out.println("Enter 1: To feed your Dargon");
@@ -212,88 +213,64 @@ public class VirtualPet {
 		System.out.println("Enter \"quit\" to exit");
 		System.out.println("**************************************************");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-	//Gameplay####################################################################
-	
+	// Gameplay####################################################################
+
 	public void gamePLay() {
-		if(welcomeCount == 0) {
+		if (welcomeCount == 0) {
 			welcome();
 			printMenu();
 		}
 		boolean menuLoop = true;
-		while(menuLoop) {
-		System.out.println("Enter a choice from the Menu to control your Dragon");
-		String userInput = input.nextLine();
-		switch(userInput.toLowerCase()) {
-		case "1":
-			eat();
-			break;
-		case "2":
-			fly();
-			break;
-		case "3":
-			breatheFire();
-			break;
-		case "4":
-			treasureHunt();
-			break;
-		case "5":
-			sleep();
-			break;
-		case "6":
-			treasureTracker();
-			break;
-		case "7":
-			printMenu();
-			break;
-		case "8":
-			dragonArtTwo();
-			dragonArtOne();
-			break;
-		case "9":
-			tellMeAboutDragon();
-			break;
-		case "quit":
-			menuLoop = false;
-			System.exit(0);
-		}
-		
-		
+		while (menuLoop) {
+			System.out.println("Enter a choice from the Menu to control your Dragon");
+			String userInput = input.nextLine();
+			switch (userInput.toLowerCase()) {
+			case "1":
+				eat();
+				break;
+			case "2":
+				fly();
+				break;
+			case "3":
+				breatheFire();
+				break;
+			case "4":
+				treasureHunt();
+				break;
+			case "5":
+				sleep();
+				break;
+			case "6":
+				treasureTracker();
+				break;
+			case "7":
+				printMenu();
+				break;
+			case "8":
+				dragonArtTwo();
+				dragonArtOne();
+				break;
+			case "9":
+				tellMeAboutDragon();
+				break;
+			case "quit":
+				menuLoop = false;
+				System.exit(0);
+			}
+
 		}
 	}
-	
-	
+
 	public void tellMeAboutDragon() {
-		System.out.println("Hello, my name is " + this.dragonName + ".  I am " + this.color +
-				" and I am " + this.height + " feet tall, and " + this.lenght + " feet long.\n"
-						+ "I have big beautiful wings and I can Breathe Fire!, but I am a gentle dragon. ");
+		System.out.println("Hello, my name is " + this.dragonName + ".  I am " + this.color + " and I am " + this.height
+				+ " feet tall, and " + this.lenght + " feet long.\n"
+				+ "I have big beautiful wings and I can Breathe Fire!, but I am a gentle dragon. ");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//******************************************************************************
-	//Dragon Graphic output
-	
+
+	// ******************************************************************************
+	// Dragon Graphic output
+
 	public void dragonArtOne() {
 		System.out.println(" ^___^");
 		System.out.println(" |o--o|");
@@ -301,12 +278,12 @@ public class VirtualPet {
 		System.out.println(" \\_O_/ ");
 		System.out.println(" * HI *      ");
 	}
+
 	public void dragonArtTwo() {
 		System.out.println(" ^___^");
 		System.out.println(" |*--*|");
 		System.out.println(" | .. |");
 		System.out.println(" \\_-_/ ");
-		
-		}
-	}
 
+	}
+}

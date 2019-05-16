@@ -39,27 +39,27 @@ public class VirtualPetTest {
 //		assertEquals(eating, underTest.eat());
 //	}
 	
-//	@Test
-//	public void isFlyingTest() {
-//		//When this method is called the dragon should fly
-//		boolean flying = true;
-//		assertEquals(flying, underTest.fly());
-//	}
+	@Test
+	public void isFlyingTest() {
+		//When this method is called the dragon should fly
+		boolean flying = true;
+		assertEquals(flying, underTest.fly());
+	}
 	
 	
-//	@Test
-//	public void isSleepingTest() {
-//		boolean sleeping = true;
-//		assertEquals(sleeping, underTest.sleep());
-//	}
+	@Test
+	public void isSleepingTest() {
+		boolean sleeping = true;
+		assertEquals(sleeping, underTest.sleep());
+	}
 	
-//	@Test
-//	public void tickTesting() {
-//		int tickCount = 2;
-//		int tickTest = underTest.tick(2);
-//		//underTest.tick();
-//		assertEquals(tickCount, tickTest);	
-//	}
+	@Test
+	public void tickTesting() {
+		int tickCount = 2;
+		int tickTest = underTest.tick(2);
+		//underTest.tick();
+		assertEquals(tickCount, tickTest);	
+	}
 	
 	@Test
 	public void treasureHuntTest() {
